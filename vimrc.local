@@ -1,0 +1,1 @@
+let g:rspec_command = "!echo bundle exec rspec {spec} && bundle exec rspec {spec}"
