@@ -1,0 +1,2 @@
+Plug 'jgdavey/tslime.vim'
+Plug 'christoomey/vim-tmux-navigator'
