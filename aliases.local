@@ -1,1 +1,2 @@
 alias be="bundle exec"
+alias pbr="git checkout master && git pull && bundle && bundle exec rake db:migrate"
