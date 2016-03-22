@@ -3,3 +3,6 @@ alias pbr="git checkout master && git pull && bundle && bundle exec rake db:migr
 alias wip="git add -A && git commit -m 'WIP'"
 alias reset="bundle exec rake db:drop && bundle exec rake db:create && bundle
 exec rake db:schema:load"
+
+alias b-d="git branch --merged | grep -E -v '\*|master' | xargs git branch -d"
+alias b-D="git branch | grep -E -v '\*|master' | xargs git branch -D"
