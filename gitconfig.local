@@ -1,3 +1,5 @@
 [user]
   name = Adrian Cann
   email = adriantcann@gmail.com
+  gpgsign = true
+  signingkey = Adrian Cann <adriantcann@gmail.com>
