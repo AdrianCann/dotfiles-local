@@ -8,4 +8,5 @@ exec rake db:schema:load"
 alias b-d="git branch --merged | grep -E -v '\*|master' | xargs git branch -d"
 alias b-D="git branch | grep -E -v '\*|master' | xargs git branch -D"
 alias tt="tat && tmux split-window -h && tmux swap-pane -U"
-alias vv='vim -- "$(ls -t | head -n 1)"'
+alias vlm='vim -- "$(ls -t | head -n 1)"'
+alias vfl="vim `git status --porcelain | awk 'NR==1{print $2}'`"
