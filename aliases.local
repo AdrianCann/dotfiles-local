@@ -1,12 +1,14 @@
+mainbranch=master
+
 alias be="bundle exec"
-alias pbr="git checkout master && git pull && bundle && bundle exec rake db:migrate"
+alias pbr="git checkout ${mainbranch} && git pull && bundle && bundle exec rake db:migrate"
 alias pbrt="pbr && bundle exec rake db:test:prepare && bundle exec rake"
 alias wip="git add -A && git commit -m 'WIP'"
 alias reset="bundle exec rake db:drop && bundle exec rake db:create && bundle
 exec rake db:schema:load"
 
-alias b-d="git branch --merged | grep -E -v '\*|master' | xargs git branch -d"
-alias b-D="git branch | grep -E -v '\*|master' | xargs git branch -D"
+alias b-d="git branch --merged | grep -E -v '\*|${mainbranch}' | xargs git branch -d"
+alias b-D="git branch | grep -E -v '\*|${mainbranch}' | xargs git branch -D"
 alias tt="tat && tmux split-window -h && tmux swap-pane -U"
 alias vlm='vim -- "$(ls -t | head -n 1)"'
 alias vfl="vim `git status --porcelain | awk 'BEGIN { FS = "[ \t\n]+" } { print $3 }'`"
