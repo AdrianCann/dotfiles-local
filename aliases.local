@@ -11,4 +11,4 @@ alias b-d="git branch --merged | grep -E -v '\*|${mainbranch}' | xargs git branc
 alias b-D="git branch | grep -E -v '\*|${mainbranch}' | xargs git branch -D"
 alias tt="tat && tmux split-window -h && tmux swap-pane -U"
 alias vlm='vim -- "$(ls -t | head -n 1)"'
-alias vfl="vim `git status --porcelain | awk 'BEGIN { FS = "[ \t\n]+" } { print $3 }'`"
+alias vfl="vim $(git status --porcelain | awk 'BEGIN { FS = "[ \t\n]+" } { print $3 }')"
