@@ -28,3 +28,5 @@ from
 /Users/acann/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/mysql2-0.3.20/lib/mysql2/client.rb:70:in
 `connect'
 
+# find replace
+find app/models/ -type f -exec sed -i "" 's/old string/new string/g' {} \;
