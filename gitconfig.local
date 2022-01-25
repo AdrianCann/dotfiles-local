@@ -1,3 +1,9 @@
 [user]
   name = Adrian Cann
   email = adriantcann@gmail.com
+[pull]
+  rebase = true
+[fetch]
+  prune = true
+[diff]
+  colorMoved = zebra
