@@ -1,0 +1,4 @@
+path+=('~/boilerplate')
+# https://github.com/AdrianCann/boilerplate
+# cd ~ && git clone https://github.com/AdrianCann/boilerplate.git
+export PATH

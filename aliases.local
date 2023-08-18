@@ -13,3 +13,4 @@ alias tt="tat && tmux split-window -h && tmux swap-pane -U"
 alias vlm='vim -- "$(ls -t | head -n 1)"'
 alias vfl="echo $(git status --porcelain | awk 'BEGIN { FS = "[ \t\n]+" } { print $3 }') | xargs -o vim"
 alias vul="echo $(git status --porcelain | awk 'END { print $2 }') | xargs -o vim"
+alias gds="g diff master head --stat=10000 --name-only"
