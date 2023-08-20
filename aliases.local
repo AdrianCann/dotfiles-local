@@ -14,3 +14,5 @@ alias vlm='vim -- "$(ls -t | head -n 1)"'
 alias vfl="echo $(git status --porcelain | awk 'BEGIN { FS = "[ \t\n]+" } { print $3 }') | xargs -o vim"
 alias vul="echo $(git status --porcelain | awk 'END { print $2 }') | xargs -o vim"
 alias gds="g diff master head --stat=10000 --name-only"
+alias rcs="echo 'running changed specs' && gds | grep 'spec.rb' | while read line ; be rspec $line ; done"
+alias rcs2="echo 'running changed specs' | gds | grep 'spec\.rb$' | tr '\n' ' ' | be rspec"
